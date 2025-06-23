@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,20 +29,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: 'nagolpramukh@gmail.com',
+      href: 'mailto:nagolpramukh@gmail.com'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
-      href: 'https://maps.google.com'
+      value: 'USA',
+      href: 'https://maps.google.com/?q=USA'
     }
   ];
 
@@ -57,12 +51,6 @@ const Contact = () => {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://linkedin.com',
-      color: 'hover:text-blue-400'
-    },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com',
       color: 'hover:text-blue-400'
     }
   ];
@@ -103,7 +91,7 @@ const Contact = () => {
                 Let's Start a Conversation
               </h3>
               <p className="text-slate-300 text-lg leading-relaxed mb-8">
-                Reach out via email, phone, or connect on social media. I'll respond as soon as possible!
+                Reach out via email or connect on social media. I'll respond as soon as possible!
               </p>
               <div className="space-y-6">
                 {contactInfo.map(({ icon: Icon, label, value, href }) => (
@@ -113,13 +101,17 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-slate-400 text-sm">{label}</div>
-                      <a
-                        href={href}
-                        className="text-slate-200 text-lg hover:text-blue-400 transition-colors duration-200"
-                        target="_blank" rel="noopener noreferrer"
-                      >
-                        {value}
-                      </a>
+                      {href ? (
+                        <a
+                          href={href}
+                          className="text-slate-200 text-lg hover:text-blue-400 transition-colors duration-200"
+                          target="_blank" rel="noopener noreferrer"
+                        >
+                          {value}
+                        </a>
+                      ) : (
+                        <span className="text-slate-200 text-lg">{value}</span>
+                      )}
                     </div>
                   </div>
                 ))}
