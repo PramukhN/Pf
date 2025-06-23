@@ -4,22 +4,6 @@ import { motion } from 'framer-motion';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Full Stack Software Engineer',
-      company: 'StorrSec LLC',
-      location: 'Washington, DC',
-      period: 'May 2025 – Present',
-      type: 'Full-time',
-      description: [
-        'Spearheaded the development and deployment of a microservice-based application hosted on Microsoft Azure using Docker and Kubernetes, which improved the system’s fault tolerance and reduced service downtime by 30%.',
-        'Led the implementation of a CI/CD pipeline using GitHub Actions, integrated with automated testing and rollback logic, which accelerated production releases by 25% without compromising code quality.',
-        'Developed and maintained robust REST APIs in Node.js and Express, with optimised database queries and middleware logic, leading to a 40% improvement in overall backend response performance.',
-        'Designed and built reusable UI components in React that adhered to accessibility standards and performance optimisation techniques, enhancing the frontend responsiveness for over 10,000 monthly active users.',
-        'Conducted rigorous code reviews, automated test coverage enhancements, and bug triaging processes, reducing production-level errors by more than 35% within two quarters.',
-        'Strengthened access control by architecting and deploying role-based access mechanisms across the platform, securing sensitive administrative operations and maintaining compliance with internal security policies.'
-      ],
-      technologies: ['Microsoft Azure', 'Docker', 'Kubernetes', 'Node.js', 'Express', 'React', 'GitHub Actions']
-    },
-    {
       title: 'Software Development Intern',
       company: 'SWAPS Tech Pvt Ltd',
       location: 'Bengaluru, India',
@@ -35,6 +19,7 @@ const Experience = () => {
       ],
       technologies: ['Python', 'MySQL', 'Web Development', 'API Documentation', 'Token Authentication']
     }
+    // Add other experience objects here as needed.
   ];
 
   return (
@@ -74,11 +59,6 @@ const Experience = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-900 z-10">
-                  <div className="w-full h-full bg-blue-400 rounded-full animate-pulse"></div>
-                </div>
-
                 {/* Content */}
                 <div className={`flex-1 ml-12 md:ml-0 ${
                   index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
@@ -95,7 +75,7 @@ const Experience = () => {
                       <span className="text-slate-400">|</span>
                       <span className="text-slate-300">{experience.period}</span>
                     </div>
-                    <ul className="list-disc ml-6 space-y-2 text-slate-300 mb-4">
+                    <ul className="space-y-2 text-slate-300 mb-4 list-disc list-inside">
                       {experience.description.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
