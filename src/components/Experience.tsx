@@ -1,64 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Full-Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
+      title: 'Full Stack Software Engineer',
+      company: 'StorrSec LLC',
+      location: 'Washington, DC',
+      period: 'May 2025 – Present',
       type: 'Full-time',
       description: [
-        'Led development of microservices architecture serving 100K+ daily active users',
-        'Architected and implemented real-time collaboration features using WebSocket technology',
-        'Mentored junior developers and established coding standards and best practices',
-        'Improved application performance by 40% through optimization and caching strategies'
+        'Spearheaded the development and deployment of a microservice-based application hosted on Microsoft Azure using Docker and Kubernetes, which improved the system’s fault tolerance and reduced service downtime by 30%.',
+        'Led the implementation of a CI/CD pipeline using GitHub Actions, integrated with automated testing and rollback logic, which accelerated production releases by 25% without compromising code quality.',
+        'Developed and maintained robust REST APIs in Node.js and Express, with optimised database queries and middleware logic, leading to a 40% improvement in overall backend response performance.',
+        'Designed and built reusable UI components in React that adhered to accessibility standards and performance optimisation techniques, enhancing the frontend responsiveness for over 10,000 monthly active users.',
+        'Conducted rigorous code reviews, automated test coverage enhancements, and bug triaging processes, reducing production-level errors by more than 35% within two quarters.',
+        'Strengthened access control by architecting and deploying role-based access mechanisms across the platform, securing sensitive administrative operations and maintaining compliance with internal security policies.'
       ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker', 'Kubernetes']
+      technologies: ['Microsoft Azure', 'Docker', 'Kubernetes', 'Node.js', 'Express', 'React', 'GitHub Actions']
     },
     {
-      title: 'Full-Stack Developer',
-      company: 'Innovation Labs',
-      location: 'Austin, TX',
-      period: '2020 - 2022',
-      type: 'Full-time',
+      title: 'Software Development Intern',
+      company: 'SWAPS Tech Pvt Ltd',
+      location: 'Bengaluru, India',
+      period: 'Jul 2020 – Jul 2021',
+      type: 'Internship',
       description: [
-        'Developed and maintained multiple client-facing web applications',
-        'Collaborated with design team to implement pixel-perfect responsive interfaces',
-        'Built RESTful APIs and integrated third-party services',
-        'Participated in code reviews and agile development processes'
+        'Collaborated with senior developers to refactor and modularise core backend services in Python and MySQL, which resulted in a 25% decrease in API latency across core transaction endpoints.',
+        'Automated backend admin tasks by scripting token-based workflows and building web interfaces, which collectively saved more than 10 hours of manual labour per week.',
+        'Designed and implemented a secure authentication module with encrypted token-based session handling and password hashing, significantly reducing login vulnerabilities in internal systems.',
+        'Took ownership of writing and maintaining detailed API documentation and developer handoff guides, improving onboarding time for new engineers and increasing codebase transparency.',
+        'Resolved over 40 critical bugs and integration issues across multiple sprints by conducting structured debugging and regression testing sessions, improving the overall platform stability.',
+        'Participated in sprint reviews and daily standups, presenting deliverables and blockers clearly while contributing to agile team velocity improvements throughout the internship.'
       ],
-      technologies: ['Vue.js', 'Express.js', 'MongoDB', 'Firebase', 'Tailwind CSS']
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Digital Agency',
-      location: 'Remote',
-      period: '2019 - 2020',
-      type: 'Contract',
-      description: [
-        'Created responsive web applications for various industry clients',
-        'Implemented modern frontend frameworks and build tools',
-        'Optimized websites for performance and SEO',
-        'Worked closely with clients to gather requirements and deliver solutions'
-      ],
-      technologies: ['React', 'JavaScript', 'SCSS', 'Webpack', 'Git']
-    },
-    {
-      title: 'Junior Developer',
-      company: 'StartupXYZ',
-      location: 'New York, NY',
-      period: '2018 - 2019',
-      type: 'Full-time',
-      description: [
-        'Contributed to the development of a fintech application',
-        'Learned modern development practices and frameworks',
-        'Participated in daily standups and sprint planning',
-        'Fixed bugs and implemented minor features under supervision'
-      ],
-      technologies: ['JavaScript', 'HTML/CSS', 'Bootstrap', 'jQuery', 'PHP']
+      technologies: ['Python', 'MySQL', 'Web Development', 'API Documentation', 'Token Authentication']
     }
   ];
 
@@ -110,54 +85,26 @@ const Experience = () => {
                 }`}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                    className="bg-slate-800/40 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 shadow-md transition-shadow duration-300"
                   >
-                    <div className="flex flex-wrap items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">
-                          {experience.title}
-                        </h3>
-                        <div className="flex items-center gap-2 text-blue-400 font-semibold mb-2">
-                          <Briefcase size={18} />
-                          <span>{experience.company}</span>
-                        </div>
-                      </div>
-                      <div className="flex flex-col items-end text-right">
-                        <div className="flex items-center gap-2 text-slate-300 mb-1">
-                          <Calendar size={16} />
-                          <span className="text-sm">{experience.period}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-slate-400 mb-1">
-                          <MapPin size={16} />
-                          <span className="text-sm">{experience.location}</span>
-                        </div>
-                        <span className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs">
-                          {experience.type}
-                        </span>
-                      </div>
+                    <h3 className="text-2xl font-bold text-white mb-1">{experience.title}</h3>
+                    <div className="flex flex-wrap items-center gap-3 mb-3">
+                      <span className="text-blue-400 font-semibold">{experience.company}</span>
+                      <span className="text-slate-400">|</span>
+                      <span className="text-slate-300">{experience.location}</span>
+                      <span className="text-slate-400">|</span>
+                      <span className="text-slate-300">{experience.period}</span>
                     </div>
-
-                    <ul className="space-y-3 mb-6">
-                      {experience.description.map((item, itemIndex) => (
-                        <motion.li
-                          key={itemIndex}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.6, delay: itemIndex * 0.1 }}
-                          viewport={{ once: true }}
-                          className="flex items-start gap-3 text-slate-300"
-                        >
-                          <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>{item}</span>
-                        </motion.li>
+                    <ul className="list-disc ml-6 space-y-2 text-slate-300 mb-4">
+                      {experience.description.map((item, i) => (
+                        <li key={i}>{item}</li>
                       ))}
                     </ul>
-
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-2">
                       {experience.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-slate-700/50 text-slate-400 rounded-full text-sm border border-slate-600 hover:border-slate-500 transition-colors duration-300"
+                          className="px-2 py-1 bg-slate-700 text-xs text-slate-200 rounded"
                         >
                           {tech}
                         </span>
@@ -169,33 +116,6 @@ const Experience = () => {
             ))}
           </div>
         </div>
-
-        {/* Call to action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Want to know more about my experience?
-            </h3>
-            <p className="text-slate-300 mb-6">
-              I'm always happy to discuss my projects and share insights about my professional journey.
-            </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <span>Let's Connect</span>
-              <Briefcase size={20} />
-            </motion.a>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
