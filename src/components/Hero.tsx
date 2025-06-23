@@ -247,7 +247,7 @@ const Hero = () => {
             {[
               { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'hover:text-gray-300' },
               { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:text-blue-400' },
-              { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email', color: 'hover:text-emerald-400' }
+              { icon: Mail, href: 'mailto:nagolpramukh@gmail.com', label: 'Email', color: 'hover:text-emerald-400' }
             ].map(({ icon: Icon, href, label, color }) => (
               <motion.a
                 key={label}
