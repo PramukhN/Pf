@@ -72,7 +72,7 @@ const Experience = () => (
       </motion.div>
 
       <div className="space-y-12">
-        {experiences.map((experience, idx) => (
+        {experiences.map((exp, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 50 }}
@@ -81,21 +81,21 @@ const Experience = () => (
             viewport={{ once: true }}
           >
             <div className="bg-slate-800/40 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-white mb-1">{experience.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-1">{exp.title}</h3>
               <div className="flex flex-wrap items-center gap-3 mb-3">
-                <span className="text-blue-400 font-semibold">{experience.company}</span>
+                <span className="text-blue-400 font-semibold">{exp.company}</span>
                 <span className="text-slate-400">|</span>
-                <span className="text-slate-300">{experience.location}</span>
+                <span className="text-slate-300">{exp.location}</span>
                 <span className="text-slate-400">|</span>
-                <span className="text-slate-300">{experience.period}</span>
+                <span className="text-slate-300">{exp.period}</span>
               </div>
               <ul className="space-y-2 text-slate-300 mb-4 list-disc list-inside">
-                {experience.description.map((item, i) => (
+                {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
               <div className="flex flex-wrap gap-2 mt-2">
-                {experience.technologies.map((tech) => (
+                {exp.technologies.map((tech) => (
                   <span
                     key={tech}
                     className="px-2 py-1 bg-slate-700 text-xs text-slate-200 rounded"
