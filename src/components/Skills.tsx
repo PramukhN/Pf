@@ -5,68 +5,132 @@ import { Code, Server, Palette, Wrench, Zap, Cpu } from 'lucide-react';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Languages & Programming',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
       skills: [
-        { name: 'React', level: 95, color: 'from-blue-400 to-blue-600', icon: '⚛️' },
-        { name: 'TypeScript', level: 90, color: 'from-blue-500 to-blue-700', icon: '🔷' },
-        { name: 'Next.js', level: 88, color: 'from-slate-400 to-slate-600', icon: '▲' },
-        { name: 'Tailwind CSS', level: 92, color: 'from-cyan-400 to-cyan-600', icon: '🎨' },
-        { name: 'JavaScript', level: 94, color: 'from-yellow-400 to-yellow-600', icon: '⚡' }
+        { name: 'JavaScript (Node.js, React.js)', level: 95, icon: '⚡' },
+        { name: 'TypeScript', level: 90, icon: '🔷' },
+        { name: 'Python', level: 90, icon: '🐍' },
+        { name: 'Java', level: 85, icon: '☕' },
+        { name: 'C++', level: 80, icon: '💻' },
+        { name: 'SQL', level: 88, icon: '🗄️' },
+        { name: 'Shell Scripting', level: 80, icon: '🐚' }
       ]
     },
     {
-      title: 'Backend',
+      title: 'Frontend Technologies',
+      icon: Palette,
+      color: 'from-pink-500 to-purple-500',
+      skills: [
+        { name: 'HTML5', level: 95, icon: '📝' },
+        { name: 'CSS3', level: 92, icon: '🎨' },
+        { name: 'React.js', level: 95, icon: '⚛️' },
+        { name: 'Bootstrap', level: 87, icon: '🎀' },
+        { name: 'Tailwind CSS', level: 92, icon: '🌈' },
+        { name: 'Responsive Design', level: 90, icon: '📱' },
+        { name: 'RESTful Integration', level: 88, icon: '🔗' }
+      ]
+    },
+    {
+      title: 'Backend & API Development',
       icon: Server,
       color: 'from-emerald-500 to-teal-500',
       skills: [
-        { name: 'Node.js', level: 89, color: 'from-green-400 to-green-600', icon: '🟢' },
-        { name: 'Python', level: 85, color: 'from-blue-400 to-yellow-400', icon: '🐍' },
-        { name: 'PostgreSQL', level: 87, color: 'from-blue-500 to-blue-700', icon: '🐘' },
-        { name: 'MongoDB', level: 83, color: 'from-green-500 to-green-700', icon: '🍃' },
-        { name: 'Express.js', level: 88, color: 'from-gray-400 to-gray-600', icon: '🚀' }
+        { name: 'Node.js', level: 90, icon: '🟢' },
+        { name: 'Express.js', level: 88, icon: '🚀' },
+        { name: 'Python (Flask/Django)', level: 85, icon: '🐍' },
+        { name: 'REST APIs', level: 92, icon: '🌐' },
+        { name: 'Microservices Architecture', level: 80, icon: '🧩' },
+        { name: 'GraphQL (basic)', level: 60, icon: '🔗' }
       ]
     },
     {
-      title: 'DevOps & Tools',
+      title: 'Databases',
+      icon: Cpu,
+      color: 'from-yellow-500 to-orange-500',
+      skills: [
+        { name: 'MySQL', level: 85, icon: '🐬' },
+        { name: 'PostgreSQL', level: 87, icon: '🐘' },
+        { name: 'MongoDB', level: 83, icon: '🍃' },
+        { name: 'Firebase', level: 80, icon: '🔥' },
+        { name: 'Redis', level: 75, icon: '🟥' }
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
       icon: Wrench,
       color: 'from-purple-500 to-pink-500',
       skills: [
-        { name: 'Git', level: 93, color: 'from-orange-400 to-orange-600', icon: '📝' },
-        { name: 'Docker', level: 82, color: 'from-blue-400 to-blue-600', icon: '🐳' },
-        { name: 'AWS', level: 78, color: 'from-orange-500 to-yellow-500', icon: '☁️' },
-        { name: 'Linux', level: 85, color: 'from-gray-600 to-gray-800', icon: '🐧' },
-        { name: 'CI/CD', level: 80, color: 'from-purple-400 to-purple-600', icon: '🔄' }
+        { name: 'Microsoft Azure', level: 80, icon: '☁️' },
+        { name: 'Google Cloud Platform (GCP)', level: 80, icon: '☁️' },
+        { name: 'Docker', level: 82, icon: '🐳' },
+        { name: 'Kubernetes', level: 75, icon: '⚙️' },
+        { name: 'GitHub Actions', level: 80, icon: '💡' },
+        { name: 'CI/CD Pipelines', level: 80, icon: '🔄' },
+        { name: 'Heroku', level: 70, icon: '🚀' }
+      ]
+    },
+    {
+      title: 'Version Control & Collaboration',
+      icon: Zap,
+      color: 'from-green-400 to-blue-400',
+      skills: [
+        { name: 'Git', level: 90, icon: '📝' },
+        { name: 'GitHub', level: 90, icon: '🐙' },
+        { name: 'GitLab', level: 80, icon: '🦊' },
+        { name: 'Bitbucket', level: 70, icon: '🧺' },
+        { name: 'Agile (Scrum/Kanban)', level: 80, icon: '🏃' },
+        { name: 'Jira', level: 75, icon: '📋' },
+        { name: 'Confluence', level: 70, icon: '📖' }
+      ]
+    },
+    {
+      title: 'Testing & Debugging',
+      icon: Wrench,
+      color: 'from-red-500 to-yellow-500',
+      skills: [
+        { name: 'Jest', level: 75, icon: '🧪' },
+        { name: 'Mocha', level: 70, icon: '☕' },
+        { name: 'Postman', level: 85, icon: '📬' },
+        { name: 'Selenium (basic)', level: 60, icon: '🕷️' },
+        { name: 'Unit Testing', level: 80, icon: '🧩' },
+        { name: 'API Testing', level: 80, icon: '🔗' },
+        { name: 'Debugging Tools (Chrome DevTools, VSCode)', level: 85, icon: '🛠️' }
+      ]
+    },
+    {
+      title: 'Tools & Platforms',
+      icon: Cpu,
+      color: 'from-blue-700 to-cyan-700',
+      skills: [
+        { name: 'VS Code', level: 90, icon: '💻' },
+        { name: 'Postman', level: 85, icon: '📬' },
+        { name: 'Firebase', level: 80, icon: '🔥' },
+        { name: 'Figma', level: 75, icon: '🎨' },
+        { name: 'NGINX', level: 70, icon: '🌀' },
+        { name: 'Linux/Unix', level: 85, icon: '🐧' },
+        { name: 'Visual Studio', level: 75, icon: '🖥️' }
+      ]
+    },
+    {
+      title: 'Software Engineering Principles',
+      icon: Code,
+      color: 'from-emerald-400 to-lime-400',
+      skills: [
+        { name: 'Object-Oriented Programming (OOP)', level: 88, icon: '🏗️' },
+        { name: 'Data Structures & Algorithms', level: 85, icon: '🧮' },
+        { name: 'System Design', level: 80, icon: '🗂️' },
+        { name: 'SDLC', level: 80, icon: '🔄' },
+        { name: 'API Design Patterns', level: 75, icon: '📐' },
+        { name: 'MVC', level: 80, icon: '🏛️' },
+        { name: 'TDD', level: 70, icon: '🧪' }
       ]
     }
   ];
 
-  const additionalSkills = [
-    { name: 'GraphQL', icon: '🔗', color: 'from-pink-500 to-rose-500' },
-    { name: 'Redis', icon: '🔴', color: 'from-red-500 to-red-600' },
-    { name: 'Kubernetes', icon: '⚙️', color: 'from-blue-500 to-indigo-500' },
-    { name: 'Microservices', icon: '🏗️', color: 'from-green-500 to-emerald-500' },
-    { name: 'WebRTC', icon: '📹', color: 'from-purple-500 to-violet-500' },
-    { name: 'Socket.io', icon: '🔌', color: 'from-yellow-500 to-amber-500' },
-    { name: 'Prisma', icon: '💎', color: 'from-indigo-500 to-purple-500' },
-    { name: 'Jest', icon: '🧪', color: 'from-orange-500 to-red-500' },
-    { name: 'Cypress', icon: '🌲', color: 'from-green-500 to-teal-500' },
-    { name: 'Figma', icon: '🎨', color: 'from-pink-500 to-purple-500' }
-  ];
-
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)
-          `
-        }}></div>
-      </div>
-
+    <section id="skills" className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,12 +151,12 @@ const Skills = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">
               <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                Skills & Technologies
+                Technical Skills
               </span>
             </h2>
           </motion.div>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-6">
-            A comprehensive toolkit built through years of hands-on experience and continuous learning
+            A comprehensive toolkit built through hands-on experience and continuous learning
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
         </motion.div>
@@ -124,48 +188,26 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -30 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ 
-                        duration: 0.6, 
-                        delay: categoryIndex * 0.2 + skillIndex * 0.1 
-                      }}
+                      transition={{ duration: 0.6, delay: skillIndex * 0.07 }}
                       viewport={{ once: true }}
-                      className="relative group/skill"
+                      className="flex items-center gap-3"
                     >
-                      <div className="flex justify-between items-center mb-3">
-                        <div className="flex items-center gap-3">
-                          <span className="text-2xl">{skill.icon}</span>
-                          <span className="text-slate-200 font-medium text-lg">{skill.name}</span>
-                        </div>
-                        <span className="text-slate-400 font-mono text-sm">{skill.level}%</span>
-                      </div>
-                      
-                      <div className="h-3 bg-slate-700/50 rounded-full overflow-hidden relative">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ 
-                            duration: 1.5, 
-                            delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.5,
-                            ease: 'easeOut'
-                          }}
-                          viewport={{ once: true }}
-                          className={`h-full bg-gradient-to-r ${skill.color} rounded-full relative overflow-hidden`}
-                        >
-                          <div className="absolute inset-0 bg-white/20 animate-pulse rounded-full"></div>
+                      <span className="text-2xl">{skill.icon}</span>
+                      <div className="flex-1">
+                        <div className="text-white font-medium">{skill.name}</div>
+                        <div className="w-full bg-slate-600 rounded-full h-2 mt-1">
                           <motion.div
-                            animate={{ x: ['-100%', '100%'] }}
-                            transition={{ 
-                              duration: 2, 
-                              repeat: Infinity, 
-                              ease: 'linear',
-                              delay: categoryIndex * 0.2 + skillIndex * 0.1 + 1
-                            }}
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.level}%` }}
+                            transition={{ duration: 1, delay: skillIndex * 0.1 + 0.5 }}
+                            viewport={{ once: true }}
+                            className="bg-gradient-to-r from-blue-500 to-emerald-500 h-2 rounded-full"
                           />
-                        </motion.div>
+                        </div>
                       </div>
+                      <span className="text-xs text-slate-300 w-10">{skill.level}%</span>
                     </motion.div>
                   ))}
                 </div>
@@ -173,46 +215,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional Skills Cloud */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <Zap className="text-yellow-400" size={28} />
-            <h3 className="text-3xl font-bold text-white">Also Working With</h3>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {additionalSkills.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                whileHover={{ 
-                  scale: 1.1, 
-                  y: -5,
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
-                }}
-                className={`group px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 hover:border-slate-500 transition-all duration-300 cursor-default relative overflow-hidden`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                <div className="flex items-center gap-3 relative z-10">
-                  <span className="text-xl">{tech.icon}</span>
-                  <span className="text-slate-300 font-medium group-hover:text-white transition-colors duration-300">
-                    {tech.name}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
